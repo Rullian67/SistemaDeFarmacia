@@ -42,3 +42,8 @@
 
 
 ### Video Do Aplicativo Em Funcionamento:
+
+
+https://github.com/Rullian67/SistemaDeFarmacia/assets/141283946/c473f9a1-6997-4638-a7fa-90a1f933ac89
+
+

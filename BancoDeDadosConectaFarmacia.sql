@@ -4,6 +4,9 @@
 -- ------------------------------------------------------
 -- Server version	5.5.62-0ubuntu0.14.04.1
 
+	 use sql10667602;
+
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -106,7 +109,7 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`sql10665626`@`%` PROCEDURE `consultaLogin`(usuario varchar(100), senha varchar(100))
+CREATE DEFINER=`sql10667602`@`%` PROCEDURE `consultaLogin`(usuario varchar(100), senha varchar(100))
 BEGIN
 Select * from usuarios where usuarios.nome = usuario and usuarios.senha = senha;
 END ;;
@@ -125,7 +128,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`sql10665626`@`%` PROCEDURE `sp_alteraRemedio`(idremedio int ,nome varchar(45), preco float,quantidade int, categoria int )
+CREATE DEFINER=`sql10667602`@`%` PROCEDURE `sp_alteraRemedio`(idremedio int ,nome varchar(45), preco float,quantidade int, categoria int )
 BEGIN
 UPDATE `remedios`
 SET
@@ -151,7 +154,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`sql10665626`@`%` PROCEDURE `sp_insereCategoria`(nomeCategoria varchar(45))
+CREATE DEFINER=`sql10667602`@`%` PROCEDURE `sp_insereCategoria`(nomeCategoria varchar(45))
 BEGIN
 INSERT INTO categoria
 (`categoria`)
@@ -173,7 +176,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`sql10665626`@`%` PROCEDURE `sp_insereRemedios`(nome varchar(45),preco float,quantidade int ,categoria int)
+CREATE DEFINER=`sql10667602`@`%` PROCEDURE `sp_insereRemedios`(nome varchar(45),preco float,quantidade int ,categoria int)
 BEGIN
 INSERT INTO remedios
 (
@@ -205,7 +208,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`sql10665626`@`%` PROCEDURE `sp_listaCategoria`()
+CREATE DEFINER=`sql10667602`@`%` PROCEDURE `sp_listaCategoria`()
 BEGIN
 Select * from categoria;
 
@@ -225,7 +228,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`sql10665626`@`%` PROCEDURE `sp_listaRemedios`()
+CREATE DEFINER=`sql10667602`@`%` PROCEDURE `sp_listaRemedios`()
 BEGIN
 	select idremedios ,nome,quantidade,
     preco,categoria.categoria
@@ -248,7 +251,7 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`sql10665626`@`%` PROCEDURE `sp_removeRemedio`(idremedio int)
+CREATE DEFINER=`sql10667602`@`%` PROCEDURE `sp_removeRemedio`(idremedio int)
 BEGIN
   delete from remedios where idremedios = idremedio;
 END ;;

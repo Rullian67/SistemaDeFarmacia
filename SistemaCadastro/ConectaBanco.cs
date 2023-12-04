@@ -11,7 +11,7 @@ namespace SistemaCadastro
 {
     internal class ConectaBanco
     {
-        MySqlConnection conexao = new MySqlConnection("server =sql10.freemysqlhosting.net;user id= sql10665626;password=h8yzsmAIGY;database =sql10665626");
+        MySqlConnection conexao = new MySqlConnection("server =sql10.freemysqlhosting.net;user id=sql10667602;password=NNikbPwcUm;database =sql10667602");
         public  string mensagem;
 
         public bool insereRemedio(Remedio novoRemedio)
